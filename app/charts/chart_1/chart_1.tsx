@@ -1,22 +1,23 @@
 "use client";
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
-import GrafContainer from "../components/grafcontainer";
+import ContentContainer from "@/app/components/container";
 
-// Define the type for the data
+
+
 interface AppleData {
   name: string;
   apples: number;
 }
 
-// Sample data
+
 const apples: AppleData[] = [
   { name: "tommy", apples: 3 },
   { name: "sandra", apples: 2 },
   { name: "vova", apples: 4 },
 ];
 
-export default function Chart01() {
+export default function Chart_1() {
   const svgRef = useRef(null);
 
   useEffect(() => {
@@ -64,8 +65,8 @@ export default function Chart01() {
   }, []);
 
   return (
-    <GrafContainer>
+    <ContentContainer >
       <svg ref={svgRef}></svg>
-    </GrafContainer>
+    </ContentContainer>
   );
 }

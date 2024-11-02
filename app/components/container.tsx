@@ -7,8 +7,9 @@ interface ContentContainerProps {
 const ContentContainer: React.FC<ContentContainerProps> = ({ children }) => {
   return (
     <section className='flex w-full justify-center flex-col items-center'>
-      <span>Select container what you prefere</span>
+      <div className="flex m-4 justify-center items-center w-auto h-auto bg-slate-100">
       {children}
+      </div>
     </section>
   );
 };
